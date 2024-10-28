@@ -61,6 +61,10 @@ function add(num1: number, num2: number): number {
 }
 
 //void型 何も返さない
-function sayHello():void {
-    console.log('hello');
+function sayHello(): void {
+  console.log("hello");
 }
+
+const anotherAdd: (n1: number, n2: number) => number = add;
+
+const doubleNumber = (num: number): number => num * 2;
