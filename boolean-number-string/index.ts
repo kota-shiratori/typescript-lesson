@@ -40,4 +40,17 @@ anything = "string";
 anything = {};
 
 let unionType: number | string = 10;
-let unionTypes: (number | string)[] = [10,20,'hello'];
+let unionTypes: (number | string)[] = [10, 20, "hello"];
+
+//Literal型はconst
+const apple: "apple" = "apple";
+
+//Union型とLiteral型
+let clothSize: "small" | "medium" | "large" = "large";
+const cloth: {
+  color: string;
+  size: "small" | "medium" | "large";
+} = {
+  color: "white",
+  size: "small",
+};
