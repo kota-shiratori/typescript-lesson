@@ -59,3 +59,8 @@ const cloth: {
 function add(num1: number, num2: number): number {
   return num1 + num2;
 }
+
+//void型 何も返さない
+function sayHello():void {
+    console.log('hello');
+}
