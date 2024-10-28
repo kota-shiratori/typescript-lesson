@@ -38,3 +38,6 @@ const coffee: {
 let anything: any = true;
 anything = "string";
 anything = {};
+
+let unionType: number | string = 10;
+let unionTypes: (number | string)[] = [10,20,'hello'];
