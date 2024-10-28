@@ -15,3 +15,5 @@ const person: {
   },
   age: 21,
 };
+
+const fruits: string[] = ['Apple', 'Banana', 'Grape'];
