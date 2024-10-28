@@ -45,11 +45,12 @@ let unionTypes: (number | string)[] = [10, 20, "hello"];
 //Literal型はconst
 const apple: "apple" = "apple";
 
-//Union型とLiteral型
-let clothSize: "small" | "medium" | "large" = "large";
+//typeエイリアス
+type ClothSize = "small" | "medium" | "large";
+let clothSize: ClothSize = "large";
 const cloth: {
   color: string;
-  size: "small" | "medium" | "large";
+  size: ClothSize;
 } = {
   color: "white",
   size: "small",
