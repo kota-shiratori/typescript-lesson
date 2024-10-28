@@ -68,3 +68,11 @@ function sayHello(): void {
 const anotherAdd: (n1: number, n2: number) => number = add;
 
 const doubleNumber = (num: number): number => num * 2;
+
+function doubleAndHandler(num: number, cb: (num: number) => number): void {
+  const doubleNum = cb(num * 2);
+  console.log(doubleNum);
+}
+doubleAndHandler(21, (doubleNum) => {
+  return doubleNum;
+});
