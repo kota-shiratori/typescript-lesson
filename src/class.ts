@@ -18,6 +18,7 @@ abstract class Person {
 }
 
 class Teacher extends Person {
+    private static instance: Teacher;
   explainJob(): void {
     console.log(this.subject);
   }
@@ -33,11 +34,14 @@ class Teacher extends Person {
     }
     this._subject = value;
   }
-  constructor(name: string, age: number, private _subject: string) {
+  private constructor(name: string, age: number, private _subject: string) {
     super(name, age);
   }
-  greeting() {
-    console.log(`Hello! ${this.name} ${this.age} ${this.subject}`);
+
+  static getInstance() {
+    if(Teacher.instance) return Teacher.instance;
+    Teacher.instance = new Teacher('Quill', 38, 'Math');
+    return Teacher.instance;
   }
 }
-console.log(Person.species);
+const teacher = Teacher.getInstance();
