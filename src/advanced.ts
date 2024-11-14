@@ -58,32 +58,32 @@ function havePet(pet: Pet) {
 }
 
 // const input = <HTMLInputElement>document.getElementById('input');
-const input = document.getElementById('input') as HTMLInputElement;
-input.value = 'input value';
-
+const input = document.getElementById("input") as HTMLInputElement;
+input.value = "input value";
 
 interface Designer {
-    name: string;
-    [index: string]: string;
+  name: string;
+  [index: string]: string;
 }
 
 const designer: Designer = {
-    name: 'Quill',
-    role: 'web'
-}
+  name: "Quill",
+  role: "web",
+};
 
 interface DownloadedData {
-    id: number;
-    user?: {
-        name?: {
-            first: string;
-            last: string;
-        }
-    }
+  id: number;
+  user?: {
+    name?: {
+      first: string;
+      last: string;
+    };
+  };
 }
 
 const downloadedData: DownloadedData = {
-    id: 1,
-}
+  id: 1,
+};
 
 console.log(downloadedData.user?.name?.first);
+const userData = downloadedData.user ?? "no-user";
